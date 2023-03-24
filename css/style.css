@@ -125,7 +125,7 @@ section {
 
 .split-v2 > .v1 {
     background-color: white;
-    width: 100vw;
+    width: 100%;
     height: 40em;
     clip-path: polygon(0 0, 50% 0, 51% 2%, 100% 2%, 100% 100%, 0 100%);
     display: flex;
@@ -169,7 +169,7 @@ section {
 }
 
 .contact-info {
-    width: clamp(23em, 50vw, 60em);
+    width: clamp(20em, 20vw, 60em);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +180,7 @@ section {
     display: flex;
     justify-content: center;
     background-color: #0e765a;
-    width: 23em;
+    width: clamp(18em, 30vw, 30em);
     height: 15em;
     align-items: center;
     position: relative;
@@ -195,7 +195,9 @@ section {
     width: 10em;
     color: white;
 }
-
+.contact-card-container > h2 {
+    font-size: clamp(1em, 1vw, 1.5em);
+}
 .contact-card-icon {
     padding: 0 !important;
     font-size: 6em;
@@ -214,6 +216,27 @@ section {
     width: 20em;
 }
 
+.footer {
+    height: 4em;
+    min-height: 0;
+    background-color: #717171;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5em;
+    color: white;
+    gap: 1em;
+}
+.footer > h3 {
+    font-size: clamp(0.7em, 2vw, 1em);
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 2em;
+    font-size: clamp(1.5em, 3vw, 2em);
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 720px) {
@@ -227,7 +250,7 @@ section {
     .split-v2 > .v2 {
         /* top: -60em; */
         top: -2em;
-        width: 100vh;
+        width: auto;
         height: 2em;
     }
     .contact-container {
