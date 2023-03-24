@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "ff-good-web-pro";
 }
 
 html {
@@ -17,7 +18,10 @@ h1 {
 h2 {
     font-family: "ff-good-web-pro";
 
-    font-size: clamp(1em, 1.5vw, 3em);
+    font-size: clamp(1.5em, 1.5vw, 3em);
+}
+h6 {
+    font-family: "ff-good-web-pro";
 }
 p {
     font-size: clamp(1em, 1vw, 3em);
@@ -121,7 +125,7 @@ section {
 
 .split-v2 > .v1 {
     background-color: white;
-    width: 100%;
+    width: 100vw;
     height: 40em;
     clip-path: polygon(0 0, 50% 0, 51% 2%, 100% 2%, 100% 100%, 0 100%);
     display: flex;
@@ -134,7 +138,7 @@ section {
 .split-v2 > .v2 {
     background-color: #0e765a;
     position: relative;
-    width: 3em;
+    width: 2em;
     height: 40em;
     top: -40em;
     /* -webkit-clip-path: polygon(100% 0, 100% 65%, 54% 100%, 0 100%, 0 0); */
@@ -166,33 +170,48 @@ section {
 
 .contact-info {
     width: clamp(23em, 50vw, 60em);
-    background-color: #0e765a;
     display: flex;
-    height: 20em;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 }
 
-.contact-info > div:nth-child(1) {
+.cont {
+    display: flex;
+    justify-content: center;
+    background-color: #0e765a;
+    width: 23em;
+    height: 15em;
+    align-items: center;
+    position: relative;
 }
 
 .contact-card-container {
     display: flex;
     flex-direction: column;
     text-align: left;
+    flex-grow: 0.3;
+    height: 6em;
+    width: 10em;
+    color: white;
 }
 
 .contact-card-icon {
     padding: 0 !important;
     font-size: 6em;
-}
-.contact-card-btn {
+    color: white;
+    width: 1em;
 }
 
 .contact-card-btn > button {
     width: 20em;
-    height: 5em;
+    height: 3em;
+    border-radius: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20em;
 }
 
 /* Media queries */
@@ -206,6 +225,12 @@ section {
         height: 60em;
     }
     .split-v2 > .v2 {
-        top: -60em;
+        /* top: -60em; */
+        top: -2em;
+        width: 100vh;
+        height: 2em;
+    }
+    .contact-container {
+        left: 0;
     }
 }
